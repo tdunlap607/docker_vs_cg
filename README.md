@@ -198,3 +198,11 @@ Results for image -> nginx:latest
     - Chainguard image CVE count: 0
 ==============================================
 ```
+
+We can see a consistent reduction of 26 CVEs from the updated docker images.
+This is due to only a single package updating from 'apt update && apt upgrade':
+```bash
+The following packages will be upgraded:
+  linux-libc-dev
+1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+```
