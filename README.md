@@ -4,7 +4,7 @@
 Why not use popular Docker hub images, update all the OS packages, and call it a day?
 
 ## Target Images (2023-07-11)
-Popular official docker images: https://hub.docker.com/search?q=&image_filter=official
+[Popular official docker images](https://hub.docker.com/search?q=&image_filter=official)
 
 <!-- <ol>
 <li>Alpine</li>
@@ -118,75 +118,83 @@ Pull Rank | Image     | Docker                                                 |
 14        | mariadb   | [mariadb:latest](https://hub.docker.com/_/mariadb)     | [cgr.dev/chainguard/mariadb:latest](https://edu.chainguard.dev/chainguard/chainguard-images/reference/mariadb/overview/)     | 
 15        | docker    |                                                        |                                                                                                                              |
 16        | rabbitmq  | [rabbitmq:latest](https://hub.docker.com/_/rabbitmq)   | [cgr.dev/chainguard/rabbitmq:latest](https://edu.chainguard.dev/chainguard/chainguard-images/reference/rabbitmq/overview/)   | 
-
+24        | php       | [php:latest](https://hub.docker.com/_/php)             | [cgr.dev/chainguard/php:latest](https://edu.chainguard.dev/chainguard/chainguard-images/reference/php/overview/)             |
 
 ## Results
 
 ```
 $ bash ./scripts/update_comparison.sh
+
 ....
 
 ==============================================
-Results for image -> postgres:latest
-    - Original image vuln count: 113
-    - Updated image vuln count: 113
-    - Reduced vulns from updated image: 0
-    - Chainguard image vuln count: 0
+Results for image -> node:latest
+    - Original image CVE count: 701
+    - Updated image CVE count: 675
+    - Reduced CVE from updated image: 26
+    - Chainguard image CVE count: 1
 ==============================================
 ==============================================
 Results for image -> python:latest
-    - Original image vuln count: 727
-    - Updated image vuln count: 701
-    - Reduced vulns from updated image: 26
-    - Chainguard image vuln count: 1
-==============================================
-==============================================
-Results for image -> node:latest
-    - Original image vuln count: 701
-    - Updated image vuln count: 675
-    - Reduced vulns from updated image: 26
-    - Chainguard image vuln count: 1
-==============================================
-==============================================
-Results for image -> memcached:latest
-    - Original image vuln count: 188
-    - Updated image vuln count: 162
-    - Reduced vulns from updated image: 26
-    - Chainguard image vuln count: 0
-==============================================
-==============================================
-Results for image -> nginx:latest
-    - Original image vuln count: 90
-    - Updated image vuln count: 90
-    - Reduced vulns from updated image: 0
-    - Chainguard image vuln count: 0
-==============================================
-==============================================
-Results for image -> redis:latest
-    - Original image vuln count: 169
-    - Updated image vuln count: 169
-    - Reduced vulns from updated image: 0
-    - Chainguard image vuln count: 0
+    - Original image CVE count: 727
+    - Updated image CVE count: 701
+    - Reduced CVE from updated image: 26
+    - Chainguard image CVE count: 1
 ==============================================
 ==============================================
 Results for image -> mariadb:latest
-    - Original image vuln count: 25
-    - Updated image vuln count: 25
-    - Reduced vulns from updated image: 0
-    - Chainguard image vuln count: 0
+    - Original image CVE count: 25
+    - Updated image CVE count: 25
+    - Reduced CVE from updated image: 0
+    - Chainguard image CVE count: 0
+==============================================
+==============================================
+Results for image -> postgres:latest
+    - Original image CVE count: 113
+    - Updated image CVE count: 113
+    - Reduced CVE from updated image: 0
+    - Chainguard image CVE count: 0
+==============================================
+==============================================
+Results for image -> redis:latest
+    - Original image CVE count: 169
+    - Updated image CVE count: 169
+    - Reduced CVE from updated image: 0
+    - Chainguard image CVE count: 0
 ==============================================
 ==============================================
 Results for image -> rabbitmq:latest
-    - Original image vuln count: 15
-    - Updated image vuln count: 15
-    - Reduced vulns from updated image: 0
-    - Chainguard image vuln count: 0
+    - Original image CVE count: 15
+    - Updated image CVE count: 15
+    - Reduced CVE from updated image: 0
+    - Chainguard image CVE count: 0
+==============================================
+==============================================
+Results for image -> php:latest
+    - Original image CVE count: 291
+    - Updated image CVE count: 265
+    - Reduced CVE from updated image: 26
+    - Chainguard image CVE count: 0
+==============================================
+==============================================
+Results for image -> memcached:latest
+    - Original image CVE count: 188
+    - Updated image CVE count: 162
+    - Reduced CVE from updated image: 26
+    - Chainguard image CVE count: 0
 ==============================================
 ==============================================
 Results for image -> traefik:latest
-    - Original image vuln count: 9
-    - Updated image vuln count: 9
-    - Reduced vulns from updated image: 0
-    - Chainguard image vuln count: 0
+    - Original image CVE count: 9
+    - Updated image CVE count: 9
+    - Reduced CVE from updated image: 0
+    - Chainguard image CVE count: 0
+==============================================
+==============================================
+Results for image -> nginx:latest
+    - Original image CVE count: 90
+    - Updated image CVE count: 90
+    - Reduced CVE from updated image: 0
+    - Chainguard image CVE count: 0
 ==============================================
 ```

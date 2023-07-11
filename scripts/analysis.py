@@ -24,20 +24,20 @@ if __name__ == '__main__':
             # Append results to dictionary
             results[f"{file.replace('.json', '')}"] = len(data['matches'])
 
-    # Calculate the reduction of vulnerabilities from the update
+    # Calculate the reduction of vulnerabilities (CVEs) from the update
     for image in images:
         print(f"==============================================")
         print(f"Results for image -> {image}:latest")
 
         original = results[f"{image}-grype"]
         updated = results[f"{image}-updated-grype"]
-        reduced_vulns = original - updated
+        reduced_cve = original - updated
 
-        print(f"    - Original image vuln count: {original}")
-        print(f"    - Updated image vuln count: {updated}")
-        print(f"    - Reduced vulns from updated image: {reduced_vulns}")
+        print(f"    - Original image CVE count: {original}")
+        print(f"    - Updated image CVE count: {updated}")
+        print(f"    - Reduced CVE from updated image: {reduced_cve}")
 
-        cg_vulns = results[f"{image}-cg-grype"]
-        print(f"    - Chainguard image vuln count: {cg_vulns}")
+        cg_cve = results[f"{image}-cg-grype"]
+        print(f"    - Chainguard image CVE count: {cg_cve}")
 
         print(f"==============================================")

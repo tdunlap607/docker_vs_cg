@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for IMAGE in python nginx redis postgres node memcached traefik mariadb rabbitmq
+for IMAGE in python nginx redis postgres node memcached traefik mariadb rabbitmq php
 do
     # Stop all containers
     docker stop $(docker ps -a -q)
