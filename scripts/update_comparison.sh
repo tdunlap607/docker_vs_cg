@@ -35,6 +35,14 @@ do
 
     # Run grype on the Chainguard image
     grype cgr.dev/chainguard/$IMAGE:latest -o json > ./grype-output/$IMAGE-cg-grype.json
+
+    ##############################################################################
+    ##############################################################################
+
+    # generate SBOMs for each using syft
+    syft cgr.dev/chainguard/$IMAGE:latest -o json > ./syft-output/$IMAGE-cg-sbom.json
+    syft $IMAGE:latest -o json > ./syft-output/$IMAGE-sbom.json
+    syft $IMAGE-updated -o json > ./syft-output/$IMAGE-updated-sbom.json
 done
 
 # Run the analysis to output vuln counts
