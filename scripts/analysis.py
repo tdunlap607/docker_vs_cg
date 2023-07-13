@@ -1,7 +1,6 @@
 """"""
 import json
 import os
-from jsondiff import diff
 import pandas as pd
 
 if __name__ == '__main__':
