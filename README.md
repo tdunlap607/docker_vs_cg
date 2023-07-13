@@ -358,7 +358,7 @@ github.com/hashicorp/consul     v1.10.12                1.11.9        go-module 
 github.com/hashicorp/consul     v1.10.12                1.14.5        go-module  GHSA-c57c-7hrj-6q6v  Medium 
 ```
 
-Nine unique vulnerabilities exist, all coming from go modules. So the question arises, how do we update these vulnerable go modules? The first thought would simply be ```go get example.com/theirmodule@latest```, so let's try it. We can interact with the shell inside of the running container in an attempt to update the go modules:
+Nine unique vulnerabilities exist, all coming from go modules. So, how do we update these vulnerable go modules? The first thought would be ```go get example.com/theirmodule@latest```, so let's try it. We can interact with the shell inside of the running container in an attempt to update the go modules:
 
 ```bash
 $ docker run -u 0 -it traefik:latest /bin/sh
