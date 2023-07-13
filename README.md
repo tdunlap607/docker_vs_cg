@@ -306,6 +306,7 @@ The following packages will be upgraded:
 1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 ```
 
+Full log can be seen here: [results.log](./docs/results.log)
 
 ## Challenges with updating vulnerable dependencies
 
@@ -438,7 +439,7 @@ Finally, the executable permission is set on the Traefik binary using chmod.
 
 So the vulnerability comes from the upstream Traefik binary, bringing up the old-aged problem of dependency lag. 
 Updating the consul package requires rebuilding the Traefik binary with the updated non-vulnerable vulnerable version of consul.
-Within the [go.mod](https://github.com/traefik/traefik/blob/v2.10.3/go.mod) file of Traefik we can see consul is pinned at the [vulnerable version of 1.10.12](https://github.com/traefik/traefik/blob/v2.10.3/go.mod#L29), even though patch is in the available version of consul [1.15.3](https://github.com/hashicorp/consul/releases). 
+Within the [go.mod](https://github.com/traefik/traefik/blob/v2.10.3/go.mod) file of Traefik we can see consul is pinned at the [vulnerable version of 1.10.12](https://github.com/traefik/traefik/blob/v2.10.3/go.mod#L29), even though the patch is in the available version of consul [1.15.3](https://github.com/hashicorp/consul/releases). 
 
 Thankfully, Chainguard has done the heavy lifting of updating vulnerable versions of dependencies.
 We can see Chainguard has updated the consul package to the non-vulnerable version of 1.15.3 within the latest [cgr.dev/chainguard/traefik](https://edu.chainguard.dev/chainguard/chainguard-images/reference/traefik/overview/) image:

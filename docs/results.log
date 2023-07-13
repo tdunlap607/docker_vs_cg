@@ -1,0 +1,845 @@
+$ bash ./scripts/update_comparison.sh 
+d25165d7eba7
+d25165d7eba7
+Deleted Images:
+deleted: sha256:39ede54b3fa3b52686954fb464b0f596786783505f2d1c185247d1276e2c44d6
+deleted: sha256:6b28981b16d199b7ca9d6d6527dc09264cea864298520bc4b4878f68ee1c8336
+
+Total reclaimed space: 25.97MB
+latest: Pulling from library/python
+Digest: sha256:b7a504dd0affeb20cf1ba1d3219f854c889c7ad557a2a5a4c4aba19cadd075f1
+Status: Image is up to date for python:latest
+docker.io/library/python:latest
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [435 packages]
+ ✔ Scanning image...       [730 vulnerabilities]
+   ├── 3 critical, 63 high, 142 medium, 30 low, 467 negligible (25 unknown)
+   └── 26 fixed
+Get:1 http://deb.debian.org/debian bookworm InRelease [147 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [52.1 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8904 kB]
+Get:5 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [47.3 kB]
+Fetched 9199 kB in 2s (6094 kB/s)                         
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+1 package can be upgraded. Run 'apt list --upgradable' to see it.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following packages will be upgraded:
+  linux-libc-dev
+1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1810 kB of archives.
+After this operation, 34.8 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian-security bookworm-security/main amd64 linux-libc-dev amd64 6.1.37-1 [1810 kB]
+Fetched 1810 kB in 0s (4675 kB/s)      
+debconf: delaying package configuration, since apt-utils is not installed
+(Reading database ... 23974 files and directories currently installed.)
+Preparing to unpack .../linux-libc-dev_6.1.37-1_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (6.1.37-1) over (6.1.27-1) ...
+Setting up linux-libc-dev:amd64 (6.1.37-1) ...
+/bin/sh: 1: apk: not found
+sha256:f56eafce501d5ffc6721274b9a8ac9eb3686dd03215e841208edd4140a81bc34
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [435 packages]
+ ✔ Scanning image...       [704 vulnerabilities]
+   ├── 1 critical, 49 high, 138 medium, 30 low, 467 negligible (19 unknown)
+   └── 0 fixed
+
+latest: Pulling from chainguard/python
+Digest: sha256:ba8dff86ed0c5f579972f14f0c41be6121c6b6cc77668161a7d8f3de9158d063
+Status: Image is up to date for cgr.dev/chainguard/python:latest
+cgr.dev/chainguard/python:latest
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [45 packages]
+ ✔ Scanning image...       [0 vulnerabilities]
+   ├── 0 critical, 0 high, 0 medium, 0 low, 0 negligible
+   └── 0 fixed
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [45 packages]
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [435 packages]
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [435 packages]
+42cdee0f127b
+42cdee0f127b
+Deleted Images:
+deleted: sha256:9f5ee97289858257a6cb56c75be7e83e8295c3181df3a937104a57e1fc616454
+deleted: sha256:d6f4e8883fd643f561c29bb70aa13e7d3566e570dbffea8b0c50703e555a4ab1
+
+Total reclaimed space: 27.36MB
+latest: Pulling from library/nginx
+Digest: sha256:08bc36ad52474e528cc1ea3426b5e3f4bad8a130318e3140d6cfe29c8892c7ef
+Status: Image is up to date for nginx:latest
+docker.io/library/nginx:latest
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [151 packages]
+ ✔ Scanning image...       [91 vulnerabilities]
+   ├── 0 critical, 6 high, 9 medium, 4 low, 72 negligible
+   └── 0 fixed
+Get:1 http://deb.debian.org/debian bookworm InRelease [147 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [52.1 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8904 kB]
+Get:5 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [47.3 kB]
+Fetched 9199 kB in 2s (5245 kB/s)                     
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+/bin/sh: 1: apk: not found
+sha256:81538fba4f76085f7d3fd5978e63b2466851410ef70e6d8d767b6dc613de9283
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [151 packages]
+ ✔ Scanning image...       [91 vulnerabilities]
+   ├── 0 critical, 6 high, 9 medium, 4 low, 72 negligible
+   └── 0 fixed
+latest: Pulling from chainguard/nginx
+Digest: sha256:c5e3c76bd4fa4bfea67ba56b237a17e6ee6aea3b3927aee5aa084ac45fad865c
+Status: Image is up to date for cgr.dev/chainguard/nginx:latest
+cgr.dev/chainguard/nginx:latest
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [28 packages]
+ ✔ Scanning image...       [0 vulnerabilities]
+   ├── 0 critical, 0 high, 0 medium, 0 low, 0 negligible
+   └── 0 fixed
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [28 packages]
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [151 packages]
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [151 packages]
+55938f1b9756
+55938f1b9756
+Deleted Images:
+deleted: sha256:bbead4cb72ec7bddea04077e7a9210fc6d0ef01a4a63fe315b49e6636f545a14
+deleted: sha256:92f85369bdd1e5253a663877b9a54615f46be5b76b7540c1bfc4fe63e00d4fbd
+
+Total reclaimed space: 19.15MB
+latest: Pulling from library/redis
+Digest: sha256:08a82d4bf8a8b4dd94e8f5408cdbad9dd184c1cf311d34176cd3e9972c43f872
+Status: Image is up to date for redis:latest
+docker.io/library/redis:latest
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [108 packages]
+ ✔ Scanning image...       [169 vulnerabilities]
+   ├── 2 critical, 11 high, 16 medium, 6 low, 128 negligible (6 unknown)
+   └── 4 fixed
+Get:1 http://deb.debian.org/debian bookworm InRelease [147 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [52.1 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8904 kB]
+Get:5 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [47.3 kB]
+Fetched 9199 kB in 2s (5741 kB/s)                     
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+/bin/sh: 1: apk: not found
+sha256:cb9cf93c9e3895fe3ab7a3c2210176e01ad51de99239ee9f5ca3ea0dd632be01
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [108 packages]
+ ✔ Scanning image...       [169 vulnerabilities]
+   ├── 2 critical, 11 high, 16 medium, 6 low, 128 negligible (6 unknown)
+   └── 4 fixed
+latest: Pulling from chainguard/redis
+Digest: sha256:5fe3aa36c9b48cc92f4a7b9fadc171c248ada73ca1c8cd302ec10ec18c16f9f5
+Status: Image is up to date for cgr.dev/chainguard/redis:latest
+cgr.dev/chainguard/redis:latest
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [21 packages]
+ ✔ Scanning image...       [0 vulnerabilities]
+   ├── 0 critical, 0 high, 0 medium, 0 low, 0 negligible
+   └── 0 fixed
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [21 packages]
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [108 packages]
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [108 packages]
+3bb649847bc0
+3bb649847bc0
+Deleted Images:
+deleted: sha256:b4af6ba0b01825ef565ca4411e5e7664e54d420b5915f0f66282062aff598719
+deleted: sha256:31aa6f08eb55a043a19667172aed5e650131e55ad36ef165681ab15c5f7449dd
+
+Total reclaimed space: 19.15MB
+latest: Pulling from library/postgres
+Digest: sha256:362a63cb1e864195ea2bc29b5066bdb222bc9a4461bfaff2418f63a06e56bce0
+Status: Image is up to date for postgres:latest
+docker.io/library/postgres:latest
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [147 packages]
+ ✔ Scanning image...       [113 vulnerabilities]
+   ├── 0 critical, 7 high, 2 medium, 4 low, 100 negligible
+   └── 4 fixed
+
+Get:1 http://deb.debian.org/debian bookworm InRelease [147 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [52.1 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8,904 kB]
+Get:5 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg InRelease [123 kB]       
+Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [47.3 kB]
+Get:7 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg/main amd64 Packages [276 kB]
+Fetched 9,597 kB in 5s (1,955 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+/bin/sh: 1: apk: not found
+sha256:57cdb01015f6359321a8071463a1b517cfa906070be5477567083c5a4f599c15
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [147 packages]
+ ✔ Scanning image...       [113 vulnerabilities]
+   ├── 0 critical, 7 high, 2 medium, 4 low, 100 negligible
+   └── 4 fixed
+latest: Pulling from chainguard/postgres
+Digest: sha256:be1056419a1bdedcf8b35ae6a1e3b02375a8f00b5b0532d42eea0da346c97bec
+Status: Image is up to date for cgr.dev/chainguard/postgres:latest
+cgr.dev/chainguard/postgres:latest
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [46 packages]
+ ✔ Scanning image...       [0 vulnerabilities]
+   ├── 0 critical, 0 high, 0 medium, 0 low, 0 negligible
+   └── 0 fixed
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [46 packages]
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [147 packages]
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [147 packages]
+ded92f4ae99f
+ded92f4ae99f
+Deleted Images:
+deleted: sha256:1265861345776d6ca1c58b035a84e0d04646b602cd0b1ecb4f064194ccd3e395
+deleted: sha256:236bc41a5b4b1bf4a55f7df4c3f07ce1a41dfb5cc820547af8c55ac34e20fa37
+
+Total reclaimed space: 19.98MB
+latest: Pulling from library/node
+Digest: sha256:b3ca7d32f0c12291df6e45a914d4ee60011a3fce4a978df5e609e356a4a2cb88
+Status: Image is up to date for node:latest
+docker.io/library/node:latest
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [667 packages]
+ ✔ Scanning image...       [704 vulnerabilities]
+   ├── 3 critical, 61 high, 141 medium, 30 low, 444 negligible (25 unknown)
+   └── 26 fixed
+Get:1 http://deb.debian.org/debian bookworm InRelease [147 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [52.1 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8904 kB]
+Get:5 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [47.3 kB]
+Fetched 9199 kB in 2s (4315 kB/s)                     
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+1 package can be upgraded. Run 'apt list --upgradable' to see it.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following packages will be upgraded:
+  linux-libc-dev
+1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1810 kB of archives.
+After this operation, 34.8 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian-security bookworm-security/main amd64 linux-libc-dev amd64 6.1.37-1 [1810 kB]
+Fetched 1810 kB in 0s (4032 kB/s)   
+debconf: delaying package configuration, since apt-utils is not installed
+(Reading database ... 23259 files and directories currently installed.)
+Preparing to unpack .../linux-libc-dev_6.1.37-1_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (6.1.37-1) over (6.1.27-1) ...
+Setting up linux-libc-dev:amd64 (6.1.37-1) ...
+/bin/sh: 1: apk: not found
+sha256:04f47a45a9163db3c72c717aa214b22c4762b1e2682d4c41f921a7af43e4259d
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [667 packages]
+ ✔ Scanning image...       [678 vulnerabilities]
+   ├── 1 critical, 47 high, 137 medium, 30 low, 444 negligible (19 unknown)
+   └── 0 fixed
+
+latest: Pulling from chainguard/node
+Digest: sha256:88d402ca93aa900ec0bcd5ea4f7f5743c360e7455b20d2e5a0cf6ccd248ca591
+Status: Image is up to date for cgr.dev/chainguard/node:latest
+cgr.dev/chainguard/node:latest
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [279 packages]
+ ✔ Scanning image...       [1 vulnerabilities]
+   ├── 0 critical, 0 high, 1 medium, 0 low, 0 negligible
+   └── 1 fixed
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [279 packages]
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [667 packages]
+
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [667 packages]
+59363a4604dc
+59363a4604dc
+Deleted Images:
+deleted: sha256:0540b49d7922f5ea5330dac997bee3c946654e98ec08958b7cc827d4489bd1b7
+deleted: sha256:20a67f73f6343f719bcad2093635f17cca47d7085baed319312f69dec0df25f3
+
+Total reclaimed space: 27.32MB
+latest: Pulling from library/memcached
+Digest: sha256:fd4bfec2f08fe7596985ebf68a043d89744b4de3ff048f3a1c8016987568ed2e
+Status: Image is up to date for memcached:latest
+docker.io/library/memcached:latest
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [109 packages]
+ ✔ Scanning image...       [188 vulnerabilities]
+   ├── 2 critical, 24 high, 18 medium, 4 low, 128 negligible (12 unknown)
+   └── 26 fixed
+Get:1 http://deb.debian.org/debian bookworm InRelease [147 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [52.1 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8904 kB]
+Get:5 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [47.3 kB]
+Fetched 9199 kB in 2s (3979 kB/s)                     
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+1 package can be upgraded. Run 'apt list --upgradable' to see it.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following packages will be upgraded:
+  linux-libc-dev
+1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1810 kB of archives.
+After this operation, 34.8 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian-security bookworm-security/main amd64 linux-libc-dev amd64 6.1.37-1 [1810 kB]
+Fetched 1810 kB in 1s (2212 kB/s)       
+debconf: delaying package configuration, since apt-utils is not installed
+(Reading database ... 7895 files and directories currently installed.)
+Preparing to unpack .../linux-libc-dev_6.1.37-1_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (6.1.37-1) over (6.1.27-1) ...
+Setting up linux-libc-dev:amd64 (6.1.37-1) ...
+/bin/sh: 1: apk: not found
+sha256:14914f951c5466dd8eb10e51faa691f98ff4f1d69b0d889d4bfaf4e4c3a91fba
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [109 packages]
+ ✔ Scanning image...       [162 vulnerabilities]
+   ├── 0 critical, 10 high, 14 medium, 4 low, 128 negligible (6 unknown)
+   └── 0 fixed
+latest: Pulling from chainguard/memcached
+Digest: sha256:9f3118e3ba0bd5969fa63b465501afcebada895768098432138beb9402957609
+Status: Image is up to date for cgr.dev/chainguard/memcached:latest
+cgr.dev/chainguard/memcached:latest
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [37 packages]
+ ✔ Scanning image...       [0 vulnerabilities]
+   ├── 0 critical, 0 high, 0 medium, 0 low, 0 negligible
+   └── 0 fixed
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [37 packages]
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [109 packages]
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [109 packages]
+06668d49f44e
+06668d49f44e
+Deleted Images:
+deleted: sha256:d1a9c40b5ef8eaae73f4ac018be444a09e8aa5676913df58e4547460aa6cca2d
+deleted: sha256:90dd709d7ca9a5b3ecf85889b0a33ce1178a50547a9c551c28e4a7c56b447377
+
+Total reclaimed space: 25.78MB
+latest: Pulling from library/traefik
+Digest: sha256:c272e8c32fb7356c2166bc5d170ab0a2c73da7bfec561234c52f255ece1dd07c
+Status: Image is up to date for traefik:latest
+docker.io/library/traefik:latest
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [300 packages]
+ ✔ Scanning image...       [9 vulnerabilities]
+   ├── 0 critical, 3 high, 6 medium, 0 low, 0 negligible
+   └── 6 fixed
+= '/bin/sh' is not a Traefik command: assuming shell execution.
+/bin/sh: apt: not found
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/main/x86_64/APKINDEX.tar.gz
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/community/x86_64/APKINDEX.tar.gz
+v3.18.2-370-g347f3bcb2ee [https://dl-cdn.alpinelinux.org/alpine/v3.18/main]
+v3.18.2-372-g5baebed575e [https://dl-cdn.alpinelinux.org/alpine/v3.18/community]
+OK: 20065 distinct packages available
+(1/3) Upgrading busybox (1.36.1-r0 -> 1.36.1-r1)
+Executing busybox-1.36.1-r1.post-upgrade
+(2/3) Upgrading busybox-binsh (1.36.1-r0 -> 1.36.1-r1)
+(3/3) Upgrading ssl_client (1.36.1-r0 -> 1.36.1-r1)
+Executing busybox-1.36.1-r1.trigger
+OK: 11 MiB in 17 packages
+sha256:cabe120ee650f5cd05c689d71130295d4b4c58edb251b4e178203f04c14015b6
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [300 packages]
+ ✔ Scanning image...       [9 vulnerabilities]
+   ├── 0 critical, 3 high, 6 medium, 0 low, 0 negligible
+   └── 6 fixed
+latest: Pulling from chainguard/traefik
+Digest: sha256:1b665bfa9fbf087a0d8626b98b08ac53d7506f5e86bcbaad14e1c26fe53c428f
+Status: Image is up to date for cgr.dev/chainguard/traefik:latest
+cgr.dev/chainguard/traefik:latest
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [291 packages]
+ ✔ Scanning image...       [0 vulnerabilities]
+   ├── 0 critical, 0 high, 0 medium, 0 low, 0 negligible
+   └── 0 fixed
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [291 packages]
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [300 packages]
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [300 packages]
+19eecc4deacc
+19eecc4deacc
+Deleted Images:
+deleted: sha256:4fe086f6e0ab2f94e6f57a8124854452e36f2fb3a0c7714a45e4928f41047150
+deleted: sha256:324b20811cd9b8db061bc41503ff9e50a55fb83ff249b2caad818d19d15a3293
+
+Total reclaimed space: 2.814MB
+latest: Pulling from library/mariadb
+Digest: sha256:f94bb4868d953fed5220c9d3cdc8449f4c314efb07d3a18eefa6010b383f2ab8
+Status: Image is up to date for mariadb:latest
+docker.io/library/mariadb:latest
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [156 packages]
+ ✔ Scanning image...       [25 vulnerabilities]
+   ├── 0 critical, 1 high, 10 medium, 11 low, 3 negligible
+   └── 6 fixed
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]              
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]                 
+Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [108 kB]                          
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [705 kB]          
+Get:7 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:3 https://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu jammy InRelease [7764 B] 
+Get:8 https://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu jammy/main amd64 Packages [15.0 kB]  
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [44.0 kB]          
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [949 kB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [713 kB]     
+Get:12 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]            
+Get:13 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1005 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [49.8 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1205 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [730 kB]
+Get:19 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [49.4 kB]
+Get:20 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [25.6 kB]
+Fetched 25.8 MB in 3s (8602 kB/s)                           
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+/bin/sh: 1: apk: not found
+sha256:02ade324a3c76fa3fc39cee48b416d1a49ffd2cf7a37bd9e046baa746497942f
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [156 packages]
+ ✔ Scanning image...       [25 vulnerabilities]
+   ├── 0 critical, 1 high, 10 medium, 11 low, 3 negligible
+   └── 6 fixed
+latest: Pulling from chainguard/mariadb
+Digest: sha256:e9bbd7db245ac64125b55b1c425de89f37073aa1e6c3e7e966bde81538995f40
+Status: Image is up to date for cgr.dev/chainguard/mariadb:latest
+cgr.dev/chainguard/mariadb:latest
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [47 packages]
+ ✔ Scanning image...       [0 vulnerabilities]
+   ├── 0 critical, 0 high, 0 medium, 0 low, 0 negligible
+   └── 0 fixed
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [47 packages]
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [156 packages]
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [156 packages]
+224d91ed3855
+224d91ed3855
+Deleted Images:
+deleted: sha256:229481ea341ffb6448cc79290203bda8c05bbd272741e82f94aab31570898f6b
+deleted: sha256:a34f418adae871460e92011bfee511a6e3f2e174ef73c8a7eff29964078f30a2
+
+Total reclaimed space: 41.56MB
+latest: Pulling from library/rabbitmq
+Digest: sha256:e8ef560399e18e58599db8b435cef9401ef54f6783b5b52690599b99db5fa0ec
+Status: Image is up to date for rabbitmq:latest
+docker.io/library/rabbitmq:latest
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [105 packages]
+ ✔ Scanning image...       [15 vulnerabilities]
+   ├── 0 critical, 0 high, 6 medium, 6 low, 3 negligible
+   └── 0 fixed
+Get:1 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+Get:4 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [705 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [108 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]  
+Get:8 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]   
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [713 kB]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [44.0 kB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [949 kB]     
+Get:12 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]            
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1005 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [730 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [49.8 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1205 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [49.4 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [25.6 kB]
+Fetched 25.8 MB in 3s (7623 kB/s)                           
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+/bin/sh: 1: apk: not found
+sha256:e231e6a7fcfb1dc8c68b441993336136c6787338843139d408cf6d049d499022
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [105 packages]
+ ✔ Scanning image...       [15 vulnerabilities]
+   ├── 0 critical, 0 high, 6 medium, 6 low, 3 negligible
+   └── 0 fixed
+
+latest: Pulling from chainguard/rabbitmq
+Digest: sha256:f161105670facf2d36342fab0820815f82bcc307b30431cd0faf07af8698fe6b
+Status: Image is up to date for cgr.dev/chainguard/rabbitmq:latest
+cgr.dev/chainguard/rabbitmq:latest
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [37 packages]
+ ✔ Scanning image...       [0 vulnerabilities]
+   ├── 0 critical, 0 high, 0 medium, 0 low, 0 negligible
+   └── 0 fixed
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [37 packages]
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [105 packages]
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [105 packages]
+7e48ceacc15c
+7e48ceacc15c
+Deleted Images:
+deleted: sha256:b6891941b8e25683e8c69d0f7257aba3555041b5dbb7ead7a7fd4bf6391a89e6
+deleted: sha256:9f05bb0d730deef67b0ceb70c8438b65e5feb6114b5f2905a804b825d2f2f776
+
+Total reclaimed space: 41.53MB
+latest: Pulling from library/php
+Digest: sha256:62571c1701a1c05e380e71883b12f1bf91bf6706c5f1e3184c6621ba58073a7f
+Status: Image is up to date for php:latest
+docker.io/library/php:latest
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [175 packages]
+ ✔ Scanning image...       [291 vulnerabilities]
+   ├── 2 critical, 31 high, 22 medium, 4 low, 220 negligible (12 unknown)
+   └── 26 fixed
+Get:1 http://deb.debian.org/debian bookworm InRelease [147 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [52.1 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8904 kB]
+Get:5 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [47.3 kB]
+Fetched 9199 kB in 2s (5056 kB/s)                          
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+1 package can be upgraded. Run 'apt list --upgradable' to see it.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following packages will be upgraded:
+  linux-libc-dev
+1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1810 kB of archives.
+After this operation, 34.8 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian-security bookworm-security/main amd64 linux-libc-dev amd64 6.1.37-1 [1810 kB]
+Fetched 1810 kB in 0s (6547 kB/s)      
+debconf: delaying package configuration, since apt-utils is not installed
+(Reading database ... 13257 files and directories currently installed.)
+Preparing to unpack .../linux-libc-dev_6.1.37-1_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (6.1.37-1) over (6.1.27-1) ...
+Setting up linux-libc-dev:amd64 (6.1.37-1) ...
+/bin/sh: 1: apk: not found
+sha256:866cdff5de07c0888d6c18fac9840b89797b9fc6b59831fec41d9afd49b47e9b
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [175 packages]
+ ✔ Scanning image...       [265 vulnerabilities]
+   ├── 0 critical, 17 high, 18 medium, 4 low, 220 negligible (6 unknown)
+   └── 0 fixed
+
+latest: Pulling from chainguard/php
+Digest: sha256:fb4bb68e16bed2c2d0621f67970deef3be55f9af539771e43c1ebb311fbee8c8
+Status: Image is up to date for cgr.dev/chainguard/php:latest
+cgr.dev/chainguard/php:latest
+ ✔ Vulnerability DB        [no update available]
+New version of grype is available: 0.64.0 (currently running: 0.63.1)
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [69 packages]
+ ✔ Scanning image...       [0 vulnerabilities]
+   ├── 0 critical, 0 high, 0 medium, 0 low, 0 negligible
+   └── 0 fixed
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [69 packages]
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [175 packages]
+ ✔ Loaded image            
+ ✔ Parsed image            
+ ✔ Cataloged packages      [175 packages]
+==============================================
+Results for image -> memcached:latest
+    - Original package count: 109
+    - Original image CVE count: 188
+    - Updated image CVE count: 162
+    - Reduced CVE from updated image: 26
+    - Total packages updated: 1
+        - linux-libc-dev(deb): 6.1.27-1 -> 6.1.37-1
+
+    - Chainguard image CVE count: 0
+    - Chainguard package count: 37
+==============================================
+==============================================
+Results for image -> node:latest
+    - Original package count: 667
+    - Original image CVE count: 704
+    - Updated image CVE count: 678
+    - Reduced CVE from updated image: 26
+    - Total packages updated: 1
+        - linux-libc-dev(deb): 6.1.27-1 -> 6.1.37-1
+
+    - Chainguard image CVE count: 1
+    - Chainguard package count: 279
+==============================================
+==============================================
+Results for image -> traefik:latest
+    - Original package count: 300
+    - Original image CVE count: 9
+    - Updated image CVE count: 9
+    - Reduced CVE from updated image: 0
+    - Total packages updated: 3
+        - busybox(apk): 1.36.1-r0 -> 1.36.1-r1
+        - busybox-binsh(apk): 1.36.1-r0 -> 1.36.1-r1
+        - ssl_client(apk): 1.36.1-r0 -> 1.36.1-r1
+
+    - Chainguard image CVE count: 0
+    - Chainguard package count: 291
+==============================================
+==============================================
+Results for image -> nginx:latest
+    - Original package count: 151
+    - Original image CVE count: 91
+    - Updated image CVE count: 91
+    - Reduced CVE from updated image: 0
+    - Total packages updated: 0
+
+    - Chainguard image CVE count: 0
+    - Chainguard package count: 28
+==============================================
+==============================================
+Results for image -> redis:latest
+    - Original package count: 108
+    - Original image CVE count: 169
+    - Updated image CVE count: 169
+    - Reduced CVE from updated image: 0
+    - Total packages updated: 0
+
+    - Chainguard image CVE count: 0
+    - Chainguard package count: 21
+==============================================
+==============================================
+Results for image -> postgres:latest
+    - Original package count: 147
+    - Original image CVE count: 113
+    - Updated image CVE count: 113
+    - Reduced CVE from updated image: 0
+    - Total packages updated: 0
+
+    - Chainguard image CVE count: 0
+    - Chainguard package count: 46
+==============================================
+==============================================
+Results for image -> mariadb:latest
+    - Original package count: 156
+    - Original image CVE count: 25
+    - Updated image CVE count: 25
+    - Reduced CVE from updated image: 0
+    - Total packages updated: 0
+
+    - Chainguard image CVE count: 0
+    - Chainguard package count: 47
+==============================================
+==============================================
+Results for image -> rabbitmq:latest
+    - Original package count: 105
+    - Original image CVE count: 15
+    - Updated image CVE count: 15
+    - Reduced CVE from updated image: 0
+    - Total packages updated: 0
+
+    - Chainguard image CVE count: 0
+    - Chainguard package count: 37
+==============================================
+==============================================
+Results for image -> php:latest
+    - Original package count: 175
+    - Original image CVE count: 291
+    - Updated image CVE count: 265
+    - Reduced CVE from updated image: 26
+    - Total packages updated: 1
+        - linux-libc-dev(deb): 6.1.27-1 -> 6.1.37-1
+
+    - Chainguard image CVE count: 0
+    - Chainguard package count: 69
+==============================================
+==============================================
+Results for image -> python:latest
+    - Original package count: 435
+    - Original image CVE count: 730
+    - Updated image CVE count: 704
+    - Reduced CVE from updated image: 26
+    - Total packages updated: 1
+        - linux-libc-dev(deb): 6.1.27-1 -> 6.1.37-1
+
+    - Chainguard image CVE count: 0
+    - Chainguard package count: 45
+==============================================
