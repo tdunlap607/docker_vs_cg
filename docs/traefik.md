@@ -1,5 +1,7 @@
 ## Digging into Traefik
 
+Here we dive into the vulnerabilities of the [Traefik Docker Image](https://hub.docker.com/_/traefik). 
+
 [Traefik](https://traefik.io/) is a popular reverse proxy and load balancer software. The [latest traefik official docker image](https://hub.docker.com/_/traefik) averages over 1.6MM pulls per week and has over 1B+ pulls during its lifetime. Safe to say, Traefik is frequently used. So let's dig into some vulnerabilities within the popular docker image. First, we'll pull the latest docker image:
 
 ```bash
@@ -56,7 +58,7 @@ $ docker run -u 0 -it traefik:latest /bin/sh
 /bin/sh: go: not found
 ```
 
-The problem is, ```go``` is not shipped with the Traefik Docker image. The vulnerability is coming from go-modules and understanding where they are located is key to upgrading them. Let's find out where one of the the go modules ``github.com/hashicorp/consul`` is installed using [Syft](https://github.com/anchore/syft):
+The problem is ```go``` is not shipped with the Traefik Docker image. The vulnerability comes from go-modules, and understanding where they are located is key to upgrading them. Let's find out where one of the go modules ``github.com/hashicorp/consul`` is installed using [Syft](https://github.com/anchore/syft):
 
 ```bash
 $ syft traefik:latest -o json | jq '.artifacts | .[] | select(.name=="github.com/hashicorp/consul")'
@@ -95,24 +97,24 @@ $ syft traefik:latest -o json | jq '.artifacts | .[] | select(.name=="github.com
 }
 ```
 
-We can see that the path to the location is in ```"path": "/usr/local/bin/traefik"```, which is the binary for traefik.  The binary for trafeik is installed in an intermediate layer during the build process of the docker image. Examing the [Dockerfile](https://github.com/traefik/traefik-library-image/blob/v2.10.3/alpine/Dockerfile): 
+We can see that the path to the location is in ```"path": "/usr/local/bin/traefik"```, which is the binary for traefik. The binary for trafeik is installed in an intermediate layer during the build process of the docker image. Examing the [Dockerfile](https://github.com/traefik/traefik-library-image/blob/v2.10.3/alpine/Dockerfile): 
 
 ```Dockerfile
 FROM alpine:3.18
 RUN apk --no-cache add ca-certificates tzdata
 RUN set -ex; \
-	apkArch="$(apk --print-arch)"; \
-	case "$apkArch" in \
-		armhf) arch='armv6' ;; \
-		aarch64) arch='arm64' ;; \
-		x86_64) arch='amd64' ;; \
-		s390x) arch='s390x' ;; \
-		*) echo >&2 "error: unsupported architecture: $apkArch"; exit 1 ;; \
-	esac; \
-	wget --quiet -O /tmp/traefik.tar.gz "https://github.com/traefik/traefik/releases/download/v2.10.3/traefik_v2.10.3_linux_$arch.tar.gz"; \
-	tar xzvf /tmp/traefik.tar.gz -C /usr/local/bin traefik; \
-	rm -f /tmp/traefik.tar.gz; \
-	chmod +x /usr/local/bin/traefik
+  apkArch="$(apk --print-arch)"; \
+  case "$apkArch" in \
+    armhf) arch='armv6' ;; \
+    aarch64) arch='arm64' ;; \
+    x86_64) arch='amd64' ;; \
+    s390x) arch='s390x' ;; \
+    *) echo >&2 "error: unsupported architecture: $apkArch"; exit 1 ;; \
+  esac; \
+  wget --quiet -O /tmp/traefik.tar.gz "https://github.com/traefik/traefik/releases/download/v2.10.3/traefik_v2.10.3_linux_$arch.tar.gz"; \
+  tar xzvf /tmp/traefik.tar.gz -C /usr/local/bin traefik; \
+  rm -f /tmp/traefik.tar.gz; \
+  chmod +x /usr/local/bin/traefik
 COPY entrypoint.sh /
 EXPOSE 80
 ENTRYPOINT ["/entrypoint.sh"]
@@ -125,10 +127,9 @@ The tarball is then extracted to /usr/local/bin using tar.
 After extraction, the tarball is removed (rm -f).
 Finally, the executable permission is set on the Traefik binary using chmod.
 
-So the vulnerability is coming from the upstream Traefik binary. 
-Which brings up the old-aged problem of dependency lag. 
-Updating the consul package requires rebuilding the Traefik binary, with the updated non-vulnerable vulnerable version of consul.
-Which in regards to ```github.com/hashicorp/consul``` is pinned at the [vulnerable version of 1.10.12](https://github.com/traefik/traefik/blob/v2.10.3/go.mod#L29), even though the current package was patched in the availble version of consul is [1.15.3](https://github.com/hashicorp/consul/releases). 
+So the vulnerability comes from the upstream Traefik binary, bringing up the old-aged problem of dependency lag. 
+Updating the consul package requires rebuilding the Traefik binary with the updated non-vulnerable vulnerable version of consul.
+Within the [go.mod](https://github.com/traefik/traefik/blob/v2.10.3/go.mod) file of Traefik we can see consul is pinned at the [vulnerable version of 1.10.12](https://github.com/traefik/traefik/blob/v2.10.3/go.mod#L29), even though patch is in the available version of consul [1.15.3](https://github.com/hashicorp/consul/releases). 
 
 Thankfully, Chainguard has done the heavy lifting of updating vulnerable versions of dependencies.
 We can see Chainguard has updated the consul package to the non-vulnerable version of 1.15.3 within the latest [cgr.dev/chainguard/traefik](https://edu.chainguard.dev/chainguard/chainguard-images/reference/traefik/overview/) image:
@@ -167,5 +168,3 @@ $ syft cgr.dev/chainguard/traefik:latest -o json | jq '.artifacts | .[] | select
   }
 }
 ```
-
-
