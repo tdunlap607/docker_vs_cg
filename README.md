@@ -1,5 +1,5 @@
 
-# Comparison between updated Docker images and Chainguard Images
+# CG Images vs. Docker Images w/Updated OS Packages
 
 Why not use popular Docker hub images, update all the OS packages, and call it a day?
 
