@@ -15,15 +15,28 @@ if __name__ == '__main__':
 
     # Create a dictionary to hold results
     results = dict()
+    vulns = pd.DataFrame()
 
     # Load each Grype Scan
     for file in grype_results:
         with open(f'./grype-output/{file}') as f:
             # Load the json data
-            data = json.load(f)
+            grype_data = json.load(f)
 
             # Append results to dictionary
-            results[f"{file.replace('.json', '')}"] = len(data['matches'])
+            results[f"{file.replace('.json', '')}"] = len(grype_data['matches'])
+
+            # Create a list of all the vulns within the image
+            temp_vuln = [[file.replace('-grype.json', ''), 
+                         x['vulnerability']['id'], 
+                         x['artifact']['name'], 
+                         x['artifact']['version'], 
+                         x['artifact']['type']] for x in grype_data['matches']]
+            # Create a temp DF to hold vuln data
+            temp_vuln_df = pd.DataFrame(temp_vuln, columns = ['image', 'vuln_id', 'name', 'version', 'type'])
+
+            # Concat the version data back to the complete version DF
+            vulns = pd.concat([vulns, temp_vuln_df])
 
     # create a dict and DF to hold SBOM and versions data
     sboms = dict()
