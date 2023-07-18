@@ -1,7 +1,7 @@
 ### Why not use popular Docker hub images, update all the OS packages, and call it a day?
 
 Tl:Dr; 
-It doesn't work. 
+The latest Docker images have a lot of vulnerabilities! Majority of these come from Debian based packages, so trying. 
 
 Let's go for it. 
 
@@ -30,9 +30,10 @@ To do this we can use Syft: an SBOM generator for containers.
 ![Package Count](./imgs/package_distribution.png)
 
 That's a lot of packages! The average package count is 235, with 667 packages appearing in node:latest and the smallest package count of 105 in rabbitmq:latest. 
-Majority of the packages are Debian based packages, primarily because the base image of the container image. 
+Majority of the packages are Debian based packages, primarily because the what the ```latest``` tag from Docker points at. 
+It is possible to use a different base, such as Alpine and we'll get into that later. 
 
-This blog is about reducing vulnerability counts once we update those packages in a container image.
+For now, we'll focus on reducing vulnerability counts from the latest Docker images.
 So let's see where the vulenrabilities are actually occuring using Grype:
 
 ![Vulnerability Location](./imgs/vuln_distribution.png)
@@ -49,9 +50,24 @@ Well, that didn't help much. So why didn't that help?
 
 It's because the latest stable Debian packages are vulenrable. When running ```apt update && apt upgrade```, it's updating to the latest stable Debian package, which happens to be vulnerable. 
 
-## Hey now, you skipped right over those 5% of vulnerabilities in go-modules - updating go packages is easy, right?
+## How to eliminate the bulk of vulnerabilities?
 
-For the most part, yes. But in a container, not so much. Let's dig into the [Traefik Docker Image](https://hub.docker.com/_/traefik). 
+As previously seen, majority of the vulnerabilities appear within Debian based packages.
+An alternative to Debian is Alpine.
+Generally, Docker images have an Alpine alternative that can be used. 
+In the case of this blog, the only image missing the Alpine alternative was mariadb. 
+
+The below analysis follows the same process as using the ```latest``` tag, but uses the tag ```image:alpine```.
+
+![alt-text-1](./imgs/alpine-original.png "title-1") ![alt-text-2](./imgs/alpine-update.png "title-2")
+
+By switching to the Alpine based image, over XX% of the vulnerabilities were eliminated. 
+See this [Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+Another important point is the fact that Alpine is based on musl, on the other hand, cgr.dev/chainguard/nginx is based on glibc. This blog post: [Why I Will Never Use Alpine Linux Ever Again](https://betterprogramming.pub/why-i-will-never-use-alpine-linux-ever-again-a324fd0cbfd6) highlights some known issues with alpine/musl.
+
+## How can we get rid of the remaining vulnerabilities?
+
+Let's dig into the [Traefik Docker Image](https://hub.docker.com/_/traefik) as an example and those remaining ```go-module``` vulnerabilities. 
 
 [Traefik](https://traefik.io/) is a popular reverse proxy and load balancer software. The [latest traefik official docker image](https://hub.docker.com/_/traefik) averages over 1.6MM pulls per week and has over 1B+ pulls during its lifetime. Safe to say, Traefik is frequently used. So let's dig into some vulnerabilities within the popular docker image. First, we'll pull the latest docker image:
 
@@ -219,3 +235,8 @@ $ syft cgr.dev/chainguard/traefik:latest -o json | jq '.artifacts | .[] | select
   }
 }
 ```
+
+
+## How to eliminate all of the vulenrabilities?
+
+Chainguard. 

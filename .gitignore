@@ -1,3 +1,5 @@
 .venv
 /grype-output/
+/grype-slim-output/
 /syft-output/
+/syft-slim-output/
