@@ -11,7 +11,7 @@ do
     # Docker prune
     docker image prune -f
 
-
+    # Pull the lastest Docker image
     docker pull $IMAGE:latest
 
     # Run grype on the freshly pulled docker image
