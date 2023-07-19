@@ -180,21 +180,26 @@ $ bash ./scripts/update_comparison.sh
 ....
 
 ==============================================
-Results for image -> mariadb:latest
-    - Original package count: 156
-    - Original image CVE count: 25
-    - Updated image CVE count: 25
-    - Reduced CVE from updated image: 0
-    - Total packages updated: 0
+Results for image -> traefik:latest
+    - Original package count: 300
+    - Original image CVE count: 11
+    - Updated image CVE count: 9
+    - Reduced CVE from updated image: 2
+    - Total packages updated: 5
+        - busybox(apk): 1.36.1-r0 -> 1.36.1-r1
+        - busybox-binsh(apk): 1.36.1-r0 -> 1.36.1-r1
+        - libcrypto3(apk): 3.1.1-r1 -> 3.1.1-r2
+        - libssl3(apk): 3.1.1-r1 -> 3.1.1-r2
+        - ssl_client(apk): 1.36.1-r0 -> 1.36.1-r1
 
     - Chainguard image CVE count: 0
-    - Chainguard package count: 47
+    - Chainguard package count: 291
 ==============================================
 ==============================================
 Results for image -> redis:latest
     - Original package count: 108
-    - Original image CVE count: 169
-    - Updated image CVE count: 169
+    - Original image CVE count: 171
+    - Updated image CVE count: 171
     - Reduced CVE from updated image: 0
     - Total packages updated: 0
 
@@ -202,60 +207,11 @@ Results for image -> redis:latest
     - Chainguard package count: 21
 ==============================================
 ==============================================
-Results for image -> php:latest
-    - Original package count: 175
-    - Original image CVE count: 291
-    - Updated image CVE count: 265
-    - Reduced CVE from updated image: 26
-    - Total packages updated: 1
-        - linux-libc-dev(deb): 6.1.27-1 -> 6.1.37-1
-
-    - Chainguard image CVE count: 0
-    - Chainguard package count: 69
-==============================================
-==============================================
-Results for image -> postgres:latest
-    - Original package count: 147
-    - Original image CVE count: 113
-    - Updated image CVE count: 113
-    - Reduced CVE from updated image: 0
-    - Total packages updated: 0
-
-    - Chainguard image CVE count: 0
-    - Chainguard package count: 46
-==============================================
-==============================================
-Results for image -> python:latest
-    - Original package count: 435
-    - Original image CVE count: 730
-    - Updated image CVE count: 704
-    - Reduced CVE from updated image: 26
-    - Total packages updated: 1
-        - linux-libc-dev(deb): 6.1.27-1 -> 6.1.37-1
-
-    - Chainguard image CVE count: 0
-    - Chainguard package count: 45
-==============================================
-==============================================
-Results for image -> traefik:latest
-    - Original package count: 300
-    - Original image CVE count: 9
-    - Updated image CVE count: 9
-    - Reduced CVE from updated image: 0
-    - Total packages updated: 3
-        - busybox(apk): 1.36.1-r0 -> 1.36.1-r1
-        - busybox-binsh(apk): 1.36.1-r0 -> 1.36.1-r1
-        - ssl_client(apk): 1.36.1-r0 -> 1.36.1-r1
-
-    - Chainguard image CVE count: 0
-    - Chainguard package count: 291
-==============================================
-==============================================
 Results for image -> memcached:latest
     - Original package count: 109
-    - Original image CVE count: 188
-    - Updated image CVE count: 162
-    - Reduced CVE from updated image: 26
+    - Original image CVE count: 197
+    - Updated image CVE count: 164
+    - Reduced CVE from updated image: 33
     - Total packages updated: 1
         - linux-libc-dev(deb): 6.1.27-1 -> 6.1.37-1
 
@@ -265,8 +221,8 @@ Results for image -> memcached:latest
 ==============================================
 Results for image -> nginx:latest
     - Original package count: 151
-    - Original image CVE count: 91
-    - Updated image CVE count: 91
+    - Original image CVE count: 93
+    - Updated image CVE count: 93
     - Reduced CVE from updated image: 0
     - Total packages updated: 0
 
@@ -274,11 +230,56 @@ Results for image -> nginx:latest
     - Chainguard package count: 28
 ==============================================
 ==============================================
+Results for image -> rabbitmq:latest
+    - Original package count: 105
+    - Original image CVE count: 17
+    - Updated image CVE count: 17
+    - Reduced CVE from updated image: 0
+    - Total packages updated: 0
+
+    - Chainguard image CVE count: 0
+    - Chainguard package count: 37
+==============================================
+==============================================
+Results for image -> postgres:latest
+    - Original package count: 147
+    - Original image CVE count: 115
+    - Updated image CVE count: 115
+    - Reduced CVE from updated image: 0
+    - Total packages updated: 0
+
+    - Chainguard image CVE count: 0
+    - Chainguard package count: 46
+==============================================
+==============================================
+Results for image -> mariadb:latest
+    - Original package count: 156
+    - Original image CVE count: 27
+    - Updated image CVE count: 27
+    - Reduced CVE from updated image: 0
+    - Total packages updated: 0
+
+    - Chainguard image CVE count: 0
+    - Chainguard package count: 47
+==============================================
+==============================================
+Results for image -> python:latest
+    - Original package count: 435
+    - Original image CVE count: 741
+    - Updated image CVE count: 708
+    - Reduced CVE from updated image: 33
+    - Total packages updated: 1
+        - linux-libc-dev(deb): 6.1.27-1 -> 6.1.37-1
+
+    - Chainguard image CVE count: 0
+    - Chainguard package count: 45
+==============================================
+==============================================
 Results for image -> node:latest
     - Original package count: 667
-    - Original image CVE count: 704
-    - Updated image CVE count: 678
-    - Reduced CVE from updated image: 26
+    - Original image CVE count: 715
+    - Updated image CVE count: 682
+    - Reduced CVE from updated image: 33
     - Total packages updated: 1
         - linux-libc-dev(deb): 6.1.27-1 -> 6.1.37-1
 
@@ -286,15 +287,16 @@ Results for image -> node:latest
     - Chainguard package count: 279
 ==============================================
 ==============================================
-Results for image -> rabbitmq:latest
-    - Original package count: 105
-    - Original image CVE count: 15
-    - Updated image CVE count: 15
-    - Reduced CVE from updated image: 0
-    - Total packages updated: 0
+Results for image -> php:latest
+    - Original package count: 175
+    - Original image CVE count: 301
+    - Updated image CVE count: 268
+    - Reduced CVE from updated image: 33
+    - Total packages updated: 1
+        - linux-libc-dev(deb): 6.1.27-1 -> 6.1.37-1
 
     - Chainguard image CVE count: 0
-    - Chainguard package count: 37
+    - Chainguard package count: 69
 ==============================================
 ```
 
